@@ -23,6 +23,7 @@ class Database:
 
 class Ui_Page(object):
     def setupUi(self, WelcomePage):
+        self.WelcomePage = WelcomePage
         WelcomePage.setObjectName("WelcomePage")
         WelcomePage.resize(800, 600)
         WelcomePage.setMinimumSize(QtCore.QSize(800, 600))
@@ -97,21 +98,21 @@ class Ui_Page(object):
         self.ui = Ui_LoginWindow()
         self.ui.beginLogin(self.LoginWindow)
         self.LoginWindow.show()
-        WelcomePage.close()
+        self.WelcomePage.close()
 
     def reg(self):
         self.registrationPage = QtWidgets.QMainWindow()
         self.ui = Ui_registrationPage()
         self.ui.setupUi(self.registrationPage)
         self.registrationPage.show()
-        WelcomePage.close()
+        self.WelcomePage.close()
 
     def open_window(self, ui_class):
         window = QtWidgets.QMainWindow()
         ui = ui_class()
         ui.setupUi(window)
         window.show()
-        WelcomePage.close()
+        self.WelcomePage.close()
 
     def retranslateUi(self, WelcomePage):
         _translate = QtCore.QCoreApplication.translate
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     WelcomePage = QtWidgets.QMainWindow()
-    ui = Ui_WelcomePage()
+    ui = Ui_Page()
     ui.setupUi(WelcomePage)
     WelcomePage.show()
     sys.exit(app.exec_())

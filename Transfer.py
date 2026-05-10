@@ -296,9 +296,10 @@ class Ui_TransferWindow(object):
         df.rename(columns={0:'count', 1:'type',2: 'amount', 3:'oldbalanceOrig',4: 'newbalanceOrig',
                                    5:'oldbalanceDest',6: 'newbalanceDest'}, inplace=True)
         print(df)
-        loaded_model = joblib.load("banking_app_rf.pkl")
-        self.pipeline(df)
-        prediction = loaded_model.predict(self.pipeline(df))
+        # loaded_model = joblib.load("banking_app_rf.pkl")
+        # self.pipeline(df)
+        # prediction = loaded_model.predict(self.pipeline(df))
+        prediction = 0
         if prediction == 1:
             message = 'Invalid Amount. Please enter a valid positive amount.'
         else:

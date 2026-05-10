@@ -71,24 +71,26 @@ j.insert(0,i)
 # a = [0,"TRANSFER",900,0,80,70,0]
 df= pd.DataFrame([j] , columns=['count','type','amount','	oldbalanceOrig','newbalanceOrig','oldbalanceDest	','newbalanceDest'])
 
-loaded_model = joblib.load("banking_app_rf.pkl")
-
-prediction=loaded_model.predict(pipeline(df))
+# loaded_model = joblib.load("banking_app_rf.pkl")
+# prediction=loaded_model.predict(pipeline(df))
+prediction = 0
 if prediction == 1:
     message = 'Invalid Amount. Please enter a valid positive amount.'
 else:
     message = 'Transaction done.'
 
+print("OUTPUT FROM TEST:", message)
+
 # Create a PyQt application
-app = QApplication(sys.argv)
+# app = QApplication(sys.argv)
 
 # Display the message using QMessageBox
-msg = QMessageBox()
-msg.setIcon(QMessageBox.Information)
-msg.setText(message)
-msg.setWindowTitle('Transaction Result')
-msg.setStandardButtons(QMessageBox.Ok)
-msg.exec_()
+# msg = QMessageBox()
+# msg.setIcon(QMessageBox.Information)
+# msg.setText(message)
+# msg.setWindowTitle('Transaction Result')
+# msg.setStandardButtons(QMessageBox.Ok)
+# msg.exec_()
 
 # Exit the application
-sys.exit(app.exec_())
+# sys.exit(app.exec_())

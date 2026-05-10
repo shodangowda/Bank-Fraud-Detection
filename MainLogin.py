@@ -159,7 +159,7 @@ class Ui_LoginWindow(object):
         username = self.lineEdit.text()
         password = self.lineEdit_2.text()
 
-        cur.execute("SELECT * FROM NEWBANK WHERE USERNAME = ? AND PASSWORD = ?", ([(username), (password)]))
+        cur.execute("SELECT * FROM NEWBANK WHERE USERNAME = ? AND PASSWORD = ?", (username, password))
         result = cur.fetchall()
 
         if result:
