@@ -1,108 +1,78 @@
 Bank Fraud Detection System
-A Machine Learning based Bank Fraud Detection System developed using Python and Flask. This project helps identify fraudulent banking transactions using trained ML models and provides a simple banking interface.
+
+A Python-based banking fraud detection project designed to identify suspicious banking activities and improve transaction security using machine learning techniques. The system provides user authentication, transaction handling, profile management, and fraud detection functionalities through an interactive banking application.
+
 Features
-
-
-User Registration and Login
-
-
-Money Transfer Module
-
-
+User Login and Authentication
+Secure Banking Transactions
+User Profile Management
 Fraud Detection using Machine Learning
-
-
-Flask-based Web Application
-
-
-SQLite Database Integration
-
-
 Transaction Monitoring
-
-
-Simple Banking Dashboard
-
-
+Database Integration using SQLite
+Banking Dashboard Interface
 Technologies Used
-
-
 Python
-
-
-Flask
-
-
 Machine Learning
-
-
-SQLite
-
-
+SQLite Database
+Jupyter Notebook
+Tkinter (GUI)
 Pandas
-
-
 NumPy
-
-
 Scikit-learn
-
-
 Project Structure
-Bank-Fraud-Detection/│├── MainLogin.py├── MainProfile.py├── Transfer.py├── banking_app_ml.py├── flask_app.py├── mainwelcom.py├── registrationNew.py├── test.py├── BankMT.db├── BankNH.db├── banking_app_ml.ipynb└── README.md
+Bank-Fraud-Detection/
+│
+├── MainLogin.py              # User login module
+├── MainProfile.py            # User profile management
+├── Transfer.py               # Money transfer functionality
+├── banking_app_ml.py         # Machine learning fraud detection logic
+├── banking_app_ml.ipynb      # Jupyter notebook for ML model
+├── BankMT.db                 # SQLite database
+├── BankNH.db                 # SQLite database
+├── README.md                 # Project documentation
+└── __pycache__/              # Python cache files
 Installation
-
-
-Clone the repository
-
-
-git clone https://github.com/shrijithgowda/Bank-Fraud-Detection.git
-
-
-Navigate to the project folder
-
-
+Clone the Repository
+git clone https://github.com/YOUR_USERNAME/Bank-Fraud-Detection.git
+Navigate to Project Folder
 cd Bank-Fraud-Detection
+Install Required Libraries
+pip install pandas numpy scikit-learn
+How to Run the Project
+Run the Main Banking Application
+python MainLogin.py
+Run Machine Learning Module
+python banking_app_ml.py
+Open Jupyter Notebook
+jupyter notebook
 
+Then open:
 
-Install required packages
+banking_app_ml.ipynb
+Machine Learning Module
 
+The fraud detection system uses machine learning algorithms to analyze transaction patterns and identify suspicious activities. The model helps improve banking security by detecting abnormal transaction behavior.
 
-pip install flask pandas numpy scikit-learn
-
-
-Run the Flask application
-
-
-python flask_app.py
-Machine Learning
-The project uses Machine Learning algorithms to analyze banking transactions and detect suspicious or fraudulent activities.
 Database
-SQLite databases used:
 
+The project uses SQLite databases:
 
 BankMT.db
-
-
 BankNH.db
 
+These databases store user information, account details, and transaction records.
 
-Future Improvements
-
-
-Add real-time fraud alerts
-
-
-Improve model accuracy
-
-
-Add transaction history dashboard
-
-
-Deploy on cloud platforms
-
-
+Future Enhancements
+Real-time fraud detection
+OTP verification system
+Cloud database integration
+AI-based risk prediction
+Mobile banking support
+Advanced user dashboard
 Author
-Shrijith Gowda
-GitHub Repository
-Bank-Fraud-Detection Repository
+
+Shodan Gowda
+
+License
+
+This project is developed for educational and academic purposes.
